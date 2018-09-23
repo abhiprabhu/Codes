@@ -6,32 +6,30 @@ using namespace std;
 
 int main()
 {
-    int a[10],b[10],c,d;
-    float m;
-    cout<<"enter the size of the 1st array \n";
-    cin>>c;
-    cout<<"Enter the size of the 2nd array \n";
-    cin>>d;
-    cout<<"Enter the elements of first array \n";
-    for(int i=0;i<c;i++)
+    int sud[3][3],com[3][3];
+    int i,j,k;
+    cout<<"Enter the numbers\n";
+    for(i=0;i<3;i++)
     {
-        cin>>a[i];
+      for(j=0;j<3;j++)
+      {
+        cin>>sud[i][j];
+      }
     }
-    cout<<"Enter the elements of the second array \n";
-    for(int i=0;i<d;i++)
+    for(i=0;i<3;i++)
     {
-        cin>>b[i];
+      for(j=0;j<3;j++)
+      {
+        com[i][j]=sud[i][j];
+      }
     }
-    if((c+d)%2==0)
+    for(i=0;i<3;i++)
     {
-        m=float((a[c-1]+b[0]))/2;
-       // cout<<a[c-1]<<"\t"<<b[0]<<"\n";
+      for(j=0;j<3;j++)
+      {
+      if((sud[i][j]==(com[i][j])||(sud[i][j]==com[j][i]))
+      cout<<"invalid \n";
+      else cout<<"valid \n";
     }
-    else
-        if(c>d)
-            m=a[c];
-        else
-            m=b[0];
-
-    cout<<"The median is "<<fixed<<setprecision(2)<<m<<"\n";
+  }
     }
